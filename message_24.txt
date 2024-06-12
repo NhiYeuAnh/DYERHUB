@@ -4727,8 +4727,8 @@ return t end
 local Library = GetUi()
 
 local Main = Library.CreateMain({Title = 'DYER HUB | Blox Fruit', Desc = ''})
-local Page = Main.CreatePage({Page_Name = 'Main', Page_Title = 'Maining'})
-local Page = S.CreatePage({Page_Name = 'Setting', Page_Title = 'Setting'})
+local Page = Main.CreatePage({Page_Name = 'Main', Page_Title = 'Main'})
+local Page = Setting.CreatePage({Page_Name = 'Setting', Page_Title = 'Setting'})
 
 
 
