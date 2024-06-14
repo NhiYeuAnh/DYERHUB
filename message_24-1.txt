@@ -5363,7 +5363,8 @@ local Page1 = Main.CreatePage({Page_Name = 'Main', Page_Title = 'Main'})
 
 local SWeapon = Page1.CreateSection('Select Weapons')
 local weapon = {"Melee", "Sword"}
-SWeapon.CreateDropdown({Title = 'Select Weapons', List = WP, Search = false, Selected = true}, function(Value)
+SWeapon.CreateDropdown({Title = 'Select Weapons', 
+List = WP, Search = false, Selected = true}, function(Value)
     _G.UsingTool = Value
 end)
 
@@ -5386,17 +5387,16 @@ task.spawn(function()
         end)
     end
 end)
-local FastAttack = Page1.CreateSection('Select Fast Attack')
-local delayattack = {"0.1","0.2","0.15"}
-FastAttack.CreateDropdown({Title = 'Select Fast Attack', List = fa, Search = false, Selected = true}, 
-DropdownDelayAttack:SetValue("Fast Attack")
-    DropdownDelayAttack:OnChanged(function(Value)
-    getgenv().FastAttack_Mode = Value
-	if getgenv().FastAttack_Mode == "0.2" then
-		getgenv().Fast_Delay = 0.1
-	elseif getgenv().FastAttack_Mode == "0.1" then
+local attack = Page1.CreateSection('Select Attack")
+local fast = {"Normal","Mediaum","Super"}
+attack.CreateCreateDropdown({Title = 'Select Attack'
+List = WP, Search = false, Selected = true}, function(Value)
+getgenv().Fast_Delay = 0.1
+	elseif getgenv().FastAttackFaiFao_Mode == "Mediaum" then
 		getgenv().Fast_Delay = 0.15
-	elseif getgenv().FastAttack_Mode == "0.15" then
+	elseif getgenv().FastAttack_Mode == "Normal" then
 		getgenv().Fast_Delay = 0
+		elseif getgenv().FastAttack_Mode == "Super" then
 	end
 end)
+
